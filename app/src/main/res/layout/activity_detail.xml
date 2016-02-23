@@ -1,0 +1,376 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.edu.cmu.gourmetreaper.ui.DetailActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Dish Title"
+        android:id="@+id/dishTitle"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15dp"
+        android:textColor="#FFAB08" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/avgStar1"
+        android:src="@drawable/star"
+        android:layout_above="@+id/disText"
+        android:layout_toRightOf="@+id/showImg"
+        android:layout_toEndOf="@+id/showImg" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/avgStar2"
+        android:src="@drawable/star"
+        android:layout_alignTop="@+id/avgStar1"
+        android:layout_toRightOf="@+id/avgStar1"
+        android:layout_toEndOf="@+id/avgStar1" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/avgStar3"
+        android:src="@drawable/star"
+        android:layout_alignTop="@+id/avgStar2"
+        android:layout_toRightOf="@+id/avgStar2"
+        android:layout_toEndOf="@+id/avgStar2" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/avgStar4"
+        android:src="@drawable/star"
+        android:layout_alignTop="@+id/avgStar3"
+        android:layout_toRightOf="@+id/avgStar3"
+        android:layout_toEndOf="@+id/avgStar3" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/avgStar5"
+        android:src="@drawable/star"
+        android:layout_alignTop="@+id/avgStar4"
+        android:layout_toRightOf="@+id/avgStar4"
+        android:layout_toEndOf="@+id/avgStar4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="(# reviews)"
+        android:id="@+id/reviewNum"
+        android:textSize="10dp"
+        android:layout_alignBottom="@+id/avgStar5"
+        android:layout_toRightOf="@+id/avgStar5"
+        android:layout_toEndOf="@+id/avgStar5"
+        android:layout_marginLeft="31dp"
+        android:layout_marginStart="31dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Food Description"
+        android:id="@+id/disText"
+        android:layout_below="@+id/dishTitle"
+        android:layout_alignLeft="@+id/dishTitle"
+        android:layout_alignStart="@+id/dishTitle"
+        android:layout_marginLeft="35dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="10dp"
+        android:textSize="12dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Add to order"
+        android:id="@+id/addButton"
+        android:background="#ffffbf00"
+        android:textColor="#ffffffff"
+        android:onClick="addToOrder"
+        android:layout_below="@+id/disText"
+        android:layout_alignLeft="@+id/disText"
+        android:layout_alignStart="@+id/disText"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/photoText"
+        android:id="@+id/photoText"
+        android:layout_below="@+id/addButton"
+        android:layout_alignLeft="@+id/dishTitle"
+        android:layout_alignStart="@+id/dishTitle"
+        android:layout_marginTop="15dp"
+        android:textSize="15dp"
+        android:textColor="#FFAB08" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/dishImg1"
+        android:src="@drawable/menu"
+        android:layout_below="@+id/photoText"
+        android:layout_alignRight="@+id/comTitle"
+        android:layout_alignEnd="@+id/comTitle" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/dishImg2"
+        android:src="@drawable/menu"
+        android:layout_below="@+id/photoText"
+        android:layout_toRightOf="@+id/com1Star4"
+        android:layout_toEndOf="@+id/com1Star4" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/uploadImg"
+        android:src="@drawable/camara"
+        android:layout_below="@+id/commentTitle"
+        android:layout_alignLeft="@+id/commentTitle"
+        android:layout_alignStart="@+id/commentTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/comTitle"
+        android:id="@+id/comTitle"
+        android:textSize="15dp"
+        android:textColor="#FFAB08"
+        android:layout_below="@+id/dishImg1"
+        android:layout_alignRight="@+id/photoText"
+        android:layout_alignEnd="@+id/photoText" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/userImg1"
+        android:layout_below="@+id/comTitle"
+        android:layout_alignLeft="@+id/dishImg1"
+        android:layout_alignStart="@+id/dishImg1"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/user" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/com1Star1"
+        android:src="@drawable/star"
+        android:layout_alignTop="@+id/userImg1"
+        android:layout_toRightOf="@+id/userImg1"
+        android:layout_toEndOf="@+id/userImg1"
+        android:layout_marginLeft="20dp" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/com1Star2"
+        android:src="@drawable/star"
+        android:layout_alignTop="@+id/com1Star1"
+        android:layout_toRightOf="@+id/com1Star1"
+        android:layout_toEndOf="@+id/com1Star1" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/com1Star3"
+        android:src="@drawable/star"
+        android:layout_alignTop="@+id/com1Star2"
+        android:layout_toRightOf="@+id/com1Star2"
+        android:layout_toEndOf="@+id/com1Star2" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/com1Star4"
+        android:src="@drawable/star"
+        android:layout_alignTop="@+id/com1Star3"
+        android:layout_toRightOf="@+id/com1Star3"
+        android:layout_toEndOf="@+id/com1Star3" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/com1Star5"
+        android:src="@drawable/star"
+        android:layout_alignTop="@+id/com1Star4"
+        android:layout_toRightOf="@+id/com1Star4"
+        android:layout_toEndOf="@+id/com1Star4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Comment"
+        android:id="@+id/dishComText1"
+        android:layout_below="@+id/com1Star1"
+        android:layout_alignLeft="@+id/com1Star1"
+        android:layout_alignStart="@+id/com1Star1"
+        android:layout_marginTop="5dp"
+        android:textSize="10dp" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/userImg2"
+        android:layout_below="@+id/userImg1"
+        android:layout_alignLeft="@+id/userImg1"
+        android:layout_alignStart="@+id/userImg1"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/user" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/com2Star1"
+        android:src="@drawable/star"
+        android:layout_alignTop="@+id/userImg2"
+        android:layout_alignLeft="@+id/dishComText1"
+        android:layout_alignStart="@+id/dishComText1" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/com2Star2"
+        android:src="@drawable/star"
+        android:layout_alignTop="@+id/com2Star1"
+        android:layout_toRightOf="@+id/com2Star1"
+        android:layout_toEndOf="@+id/com2Star1" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/com2Star3"
+        android:src="@drawable/star"
+        android:layout_alignTop="@+id/com2Star2"
+        android:layout_toRightOf="@+id/com2Star2"
+        android:layout_toEndOf="@+id/com2Star2" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/com2Star4"
+        android:src="@drawable/star"
+        android:layout_alignTop="@+id/com2Star3"
+        android:layout_toRightOf="@+id/com2Star3"
+        android:layout_toEndOf="@+id/com2Star3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Comment"
+        android:id="@+id/dishComText2"
+        android:layout_below="@+id/com2Star1"
+        android:layout_alignLeft="@+id/com2Star1"
+        android:layout_alignStart="@+id/com2Star1"
+        android:layout_marginTop="5dp"
+        android:textSize="10dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dishComInput"
+        android:width="210dp"
+        android:textSize="12dp"
+        android:layout_below="@+id/ratingBar"
+        android:layout_alignLeft="@+id/ratingBar"
+        android:layout_alignStart="@+id/ratingBar" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fbShareButton"
+        android:src="@drawable/share"
+        android:onClick="sharePhotoToFacebook"
+        android:layout_alignBottom="@+id/dishComInput"
+        android:layout_toRightOf="@+id/submitDishCom"
+        android:layout_toEndOf="@+id/submitDishCom" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Submit"
+        android:id="@+id/submitDishCom"
+        android:background="#ffffbf00"
+        android:textColor="#ffffffff"
+        android:onClick="submitReview"
+        android:layout_below="@+id/ratingBar"
+        android:layout_toRightOf="@+id/dishComInput"
+        android:layout_toEndOf="@+id/dishComInput" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/commentTitle"
+        android:id="@+id/commentTitle"
+        android:textSize="15dp"
+        android:textColor="#FFAB08"
+        android:layout_below="@+id/userImg2"
+        android:layout_alignLeft="@+id/comTitle"
+        android:layout_alignStart="@+id/comTitle" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/dishImg3"
+        android:src="@drawable/menu"
+        android:layout_marginRight="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_alignTop="@+id/dishImg2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/showImg"
+        android:src="@drawable/menu"
+        android:layout_below="@+id/commentTitle"
+        android:layout_toRightOf="@+id/uploadImg"
+        android:layout_toEndOf="@+id/uploadImg" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar"
+        android:layout_gravity="right"
+        android:layout_below="@+id/uploadImg"
+        android:layout_alignLeft="@+id/uploadImg"
+        android:layout_alignStart="@+id/uploadImg" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/txtRatingValue"
+        android:layout_above="@+id/fbShareButton"
+        android:layout_toRightOf="@+id/ratingBar"
+        android:layout_toEndOf="@+id/ratingBar"
+        android:layout_marginBottom="10dp" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/com2Star5"
+        android:src="@drawable/star"
+        android:layout_alignTop="@+id/com2Star4"
+        android:layout_toRightOf="@+id/com2Star4"
+        android:layout_toEndOf="@+id/com2Star4" />
+
+
+</RelativeLayout>

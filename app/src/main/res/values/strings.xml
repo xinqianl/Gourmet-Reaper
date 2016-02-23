@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Lightening Order</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_menu">MenuActivity</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="title_activity_order">OrderActivity</string>
+    <string name="title_activity_connect_fb">ConnectFBActivity</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="recTitle">Chef Recommendation</string>
+    <string name="recText1">rec1</string>
+    <string name="recText2">rec2</string>
+    <string name="recText3">rec3</string>
+    <string name="popText1">pop1</string>
+    <string name="popText2">pop2</string>
+    <string name="popText3">pop3</string>
+    <string name="comText1">User\'s Comment about the restaurant</string>
+    <string name="popTitle">Most Popular</string>
+    <string name="comTitle">What they said</string>
+    <string name="priceTitle">Price</string>
+    <string name="appTitle">Appetizer</string>
+    <string name="entreTitle">Entrees</string>
+    <string name="dessertTitle">Dessert</string>
+    <string name="orderTitle">Your order on (Date)</string>
+    <string name="quanTitle">Quantity:</string>
+    <string name="totalPriceTitle">Total price:</string>
+    <string name="profileTitle">Profile</string>
+    <string name="viewOrderTitle">View Order</string>
+    <string name="shareFavTitle">Share Favorite</string>
+    <string name="getCoupTitle">Get Coupons</string>
+    <string name="makeFriTitle">Make Friends</string>
+    <string name="photoText">Check its photo</string>
+    <string name="commentTitle">Leave your comment...</string>
+
+    <string name="app_id">516610138514531</string>
+    <string name="text_details"></string>
+    <string name="post_button">post</string>
+    <string name="take_photo">take photo</string>
+    <string name="select_photo">select post photo</string>
+    <string name="input">Post content</string>
+</resources>
